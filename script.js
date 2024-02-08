@@ -89,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const toTopBtn = document.querySelector('.to-top-btn');
     window.addEventListener('scroll', function () {
       const coeff = window.scrollY / 1000;
-      console.log(coeff);
       if (window.scrollY <= 700) {
         toTopBtn.style.opacity = coeff;
       } else {
