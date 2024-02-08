@@ -1,0 +1,624 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    font-family: "Inter", "Arial", "Helvetica", sans-serif;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.2;
+    /* Основной цвет фона */
+}
+
+.header-color {
+    background-color: transparent;
+    color: #ffffff;
+    /* Deep Blue / Indigo для шапки */
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+    /* Deep Blue / Indigo для заголовков */
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: #ffffff;
+    /* Dark Grey / Charcoal для текста */
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    font-family: "Rowdies", "Arial", "Helvetica", sans-serif;
+    font-size: 40px;
+    line-height: 1;
+    /* Gold / Brass Tones для текста в навигационной панели */
+}
+
+.section-header {
+    background-color: black;
+    /* Warm Beige / Taupe для фонов заголовков разделов */
+    color: #ffffff;
+}
+
+.btn-primary {
+    background-color: #800000;
+    /* Burgundy / Deep Red для кнопок */
+    border-color: #800000;
+}
+
+.btn-primary:hover {
+    background-color: #b30000;
+    /* Светлый оттенок Burgundy / Deep Red при наведении */
+    border-color: #b30000;
+}
+
+.footer {
+    background-color: #2e8b57;
+    /* Earthy Green для футера */
+    color: #fff;
+}
+
+.container {
+    padding: 0;
+    /* Убирает внутренние отступы */
+    margin: 0;
+    /* Убирает внешние отступы */
+}
+
+
+.section-box {
+    width: 100%;
+    border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #ffffff;
+}
+
+/* Стили логотипа */
+.logo {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 0;
+}
+
+
+/* и так далее для других разделов */
+
+/* Дополнительные стили по вашему усмотрению */
+
+.header {
+    display: flex;
+    align-items: center;
+    background: #1e2228;
+}
+
+.container {
+    max-width: 1480px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.header-btn {
+    font-size: 20px;
+    font-weight: 500;
+    border: 2px solid #f8c44c;
+    color: #f8c44c;
+    border-radius: 15px;
+    margin-left: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in;
+}
+
+.header-btn:hover {
+    color: #f8c44c;
+    text-decoration: none;
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+}
+
+.section-box {
+    max-width: 1920px;
+    height: 100vh;
+    min-height: 725px;
+    margin: 0 auto;
+}
+
+.section-box .container{
+    height: 100vh;
+}
+
+.jyotish {
+    background: url("./img/jyotish.png") center no-repeat;
+    background-size: cover;
+    background-position-y: 0;
+}
+
+.career {
+    background: url("./img/career.png") center no-repeat;
+    background-size: cover;
+    background-position-y: 0;
+}
+
+.finance {
+    background: url("./img/finance.png") center no-repeat;
+    background-size: cover;
+    background-position-y: 0;
+}
+
+.emigration {
+    background: url("./img/emigration.png") center no-repeat;
+    background-size: cover;
+    background-position-y: 0;
+}
+
+.relationships {
+    background: url("./img/relationships.png") center no-repeat;
+    background-size: cover;
+    background-position-y: 0;
+}
+
+.health {
+    background: url("./img/health.png") center no-repeat;
+    background-size: cover;
+    background-position-y: 0;
+}
+
+.spiritual {
+    background: url("./img/spiritual.png") center no-repeat;
+    background-size: cover;
+    background-position-y: 0;
+}
+
+.advantages {
+    background: url("./img/advantages.png") center no-repeat;
+    background-size: cover;
+    background-position-y: 0;
+}
+
+.advantages {
+    background: url("./img/emigration.png") center no-repeat;
+    background-size: cover;
+    background-position-y: 0;
+}
+
+.section-box .container {
+    padding: 40px;
+    min-height: inherit;
+}
+
+.section-box .container-flex {
+    display: flex;
+}
+
+.section-box .container-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.text-block {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px
+}
+
+.container-grid .text-block-1 {
+    max-width: 50%;
+    margin-bottom: auto;
+}
+
+.container-grid .text-block-2 {
+    max-width: 50%;
+    margin: auto 0;
+    justify-self: end;
+}
+
+.career .container {
+    align-items: center;
+}
+
+.career .text-block {
+    max-width: 45%;
+    margin-left: 150px;
+}
+
+.finance .container {
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.finance .text-block {
+    max-width: 35%;
+}
+
+.emigration .text-block-1 {
+    margin-top: 130px;
+}
+
+.emigration .text-block-2 {
+    margin: auto 0 150px;
+}
+
+.relationships .container {
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.relationships .text-block {
+    max-width: 70%;
+}
+
+.health .container {
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.health .text-block {
+    max-width: 30%;
+    margin-top: 200px;
+}
+
+.spiritual .container {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.spiritual .text-block {
+    max-width: 40%;
+}
+
+.advantages .container {
+    align-content: end;
+}
+
+.advantages .text-block {
+    max-width: 98%;
+}
+
+.advantages .text-block-1 {
+    margin-bottom: 150px;
+}
+
+.advantages .text-block-2 {
+    justify-self: end;
+    margin-top: 150px;
+}
+
+.testimonials {
+    padding: 60px 0;
+}
+
+.testimonials .container{
+    overflow: hidden;
+}
+
+.testimonials h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+.testimonials-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    height: fit-content;
+    margin-bottom: 20px;
+}
+
+.testimonial {
+    width: calc(100% / 3);
+    height: auto;
+    padding: 20px;
+    cursor: grab;
+    border: 1px solid #ffd674;
+    border-radius: 10px;
+}
+
+.testimonial-heading {
+    display: flex; 
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.testimonial-img {
+    background: url('./img/user-thumb.png') center no-repeat;
+    background-size: cover;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.testimonial-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+p.testimonial__client-name {
+    margin: 0;
+    font-size: 18px;
+}
+
+p.testimonial-text {
+    margin: 0;
+    font-size: 16px;
+    opacity: 0.6;
+}
+
+.buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.swiper__button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ffd674;
+    border: 1px solid #777777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.swiper__button:hover {
+    background-color: #f8c44c;
+}
+
+.swiper__button:focus {
+    outline: none;
+}
+
+.swiper__button:disabled {
+    background-color: #777777;
+    color:#ffffff;
+}
+
+.consultation-form {
+    padding: 60px 0;
+}
+
+.consultation-form h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+.consultation-form form {
+    max-width: 70%;
+    border: 1px solid #ffd674;
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.consultation-form fieldset {
+    background-color: #222222;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.consultation-form .form-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.consultation-form input[type="time"],
+.consultation-form input[type="date"] {
+    width: fit-content;
+}
+
+.consultation-form .form-title + p,
+#exactTimeFields p {
+    opacity: 0.5;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#approximateTimeFields {
+    flex-wrap: wrap;
+}
+
+#approximateTimeFields .heading {
+    width: 100%;
+}
+#approximateTimeFields .heading p {
+    margin-bottom: 10px;
+}
+
+#approximateTimeFields .divider {
+    display: flex;
+    align-items: flex-end;
+}
+
+#approximateTimeFields .divider span {
+    display: block;
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+#rectificationFields p {
+    margin-bottom: 10px;
+}
+
+.eventList .event { 
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto auto;
+    gap: 10px;
+}
+
+.eventList .event input[type="text"] {
+    width: 100%;
+    justify-self: stretch;
+} 
+
+.eventList .event .btn {
+    margin-top: 12px;
+} 
+
+.btn-primary:not(:disabled):not(.disabled).active:focus, 
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary.focus,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active {
+    background-color: #800000;
+    border-color: #800000;
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+    background-color: #929292;
+    border-color: #929292;
+}
+
+.footer {
+    background: #1e2228;
+    padding: 20px 0;
+    min-height: 88px;
+    display: flex;
+    align-items: center;
+}
+
+.footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.copyright p {
+    margin: 0;
+}
+
+.to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    min-width: 48px;
+    height: 48px;
+    font-size: 20px;
+    font-weight: 700;
+    border: 4px solid #ffd674;
+    color: #ffd674;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.to-top-btn:hover {
+    color: #ffd674;
+    text-decoration: none;
+    opacity: 1 !important;
+    transition: opacity 0.3s ease-in;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-check {
+    margin-bottom: 7px;
+}
+
+.form-text {
+    padding-left: 7px;
+}
+
+.form-group input[type="checkbox"],
+.form-group input[type="radio"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.form-group:has(input[type="checkbox"]) label,
+.form-group:has(input[type="radio"]) label {
+    position: relative;
+    padding-left: 5px;
+}
+
+.form-group:has(input[type="checkbox"]) label::before,
+.form-group:has(input[type="radio"]) label::before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: #000000;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -18px;
+}
+
+.form-group:has(input[type="checkbox"]) label::before {
+    border-radius: 5px;
+}
+
+.form-group:has(input[type="radio"]) label::before {
+    border-radius: 50%;
+}
+
+.form-group input[type="radio"]:checked + label::after {
+    position: absolute;
+    content: "";
+    width: 9px;
+    height: 9px;
+    background-color: #f8c44c;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -15px;
+}
+
+.form-group input[type="checkbox"]:checked + label::after {
+    position: absolute;
+    content: "✔";
+    color: #f8c44c;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -16px;
+}
