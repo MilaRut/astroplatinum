@@ -656,6 +656,12 @@ textarea:focus {
     border: 1px solid #f8c44c;
 }
 
+.form-control:focus::placeholder,
+input:focus::placeholder,
+textarea:focus::placeholder {
+    color: transparent;
+}
+
 .modal {
     position: fixed;
     top: 0;
