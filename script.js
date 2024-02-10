@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
       newEvent.innerHTML = `
     <div class="form-group">
       <h3 class="form-title">Описание события</h3>
-      <input type="text" class="form-control" name="eventDescription[]">
+      <input type="text" class="form-control" name="eventDescription[]" placeholder="Опишите событие в свободной форме">
     </div>
     <div class="form-group">
       <h3 class="form-title">Дата события</h3>
@@ -99,3 +99,53 @@ document.addEventListener('DOMContentLoaded', function () {
 
   showButton();
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const modalOpenElements = document.querySelectorAll('[data-open-modal]');
+  const modalCloseElements = document.querySelectorAll('[data-close-modal]');
+  const modals = document.querySelectorAll('.modal');
+  
+  function prepareOpening() {
+    modals.forEach((el) => {
+      setTimeout(() => {
+        el.classList.remove('modal--preload');
+      }, 100);
+    });
+  }
+  
+  function prepareClosing() {
+    modals.forEach((modal) => {
+      modal.classList.remove('active');
+    });
+  }
+  
+  function initModal() {
+    if (modals) {
+      prepareOpening();
+      modalOpenElements.forEach((el) => {
+        let currentEl = el;
+        let itemId = currentEl.getAttribute('data-modal-id');
+        let currentModal = document.querySelector(itemId);
+        el.addEventListener('click', (e) => {
+          e.preventDefault();
+          currentModal.classList.add('active');
+        });
+      });
+  
+      modalCloseElements.forEach((el) => {
+        el.addEventListener('click', () => {
+          prepareClosing();
+        });
+      });
+  
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          prepareClosing();
+        }
+      });
+    }
+  }
+  
+  initModal();
+});
+

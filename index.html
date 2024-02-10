@@ -313,7 +313,8 @@
               <div class="form-group">
                 <h3 class="form-title">Тип запроса</h3>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="requestType[]" id="career" value="career">
+                  <input class="form-check-input" type="checkbox" name="requestType[]" id="career" value="career"
+                    checked>
                   <label class="form-check-label" for="career">
                     Карьера и профессиональный рост - 10.000р
                   </label>
@@ -380,7 +381,9 @@
               <!-- Комментарий -->
               <div class="form-group">
                 <label class="form-title" for="comment">Комментарий</label>
-                <textarea class="form-control" id="comment" name="comment" rows="3"></textarea>
+                <p>Оставьте здесь дополнительные пожелания и уточнения к вашему запросу</p>
+                <textarea class="form-control" id="comment" name="comment" rows="3"
+                  placeholder="Напишите ваш комментарий"></textarea>
               </div>
             </fieldset>
 
@@ -442,8 +445,12 @@
               </div>
               <div id="rectificationFields" style="display: none;">
                 <!-- Поля для ректификации времени рождения -->
-                <p><i>Если вы хотите повысить точность анализа, вы можете перечислить ключевые события вашей жизни. По
-                  анализу событий астролог определит время рождения</i></p>
+                <p>
+                  <i>Если вы хотите повысить точность анализа, вы можете перечислить ключевые события вашей жизни. По
+                    анализу событий астролог определит время рождения.</i>
+                  <button type="button" class="example-btn" data-open-modal
+                    data-modal-id="#example-popup">Пример</button>
+                </p>
                 <div class="eventList" id="eventList"></div>
                 <button type="button" id="addEventButton" class="btn btn-primary">Добавить событие</button>
               </div>
@@ -455,7 +462,7 @@
                 <label class="form-title" for="birthPlace">Место рождения</label>
                 <p>Укажите место вашего рождения с учетом города и/или области для однозначной идентификации точки на
                   карте. В идеале - адрес роддома. При необходимости укажите координаты</p>
-                <input type="text" class="form-control" id="birthPlace" name="birthPlace" required>
+                <input type="text" class="form-control" id="birthPlace" name="birthPlace" placeholder="Ваше место рождения" required>
               </div>
             </fieldset>
 
@@ -465,7 +472,7 @@
                 <label class="form-title" for="contact">Email/Telegram</label>
                 <p> Укажите ваш Email/Telegram или любой другой удобный вам способ связи для получения результатов
                   анализа и ссылки на оплату</p>
-                <input type="text" class="form-control" id="contact" name="contact" required>
+                <input type="text" class="form-control" id="contact" name="contact" placeholder="Ваши контакты" required>
               </div>
             </fieldset>
 
@@ -484,6 +491,50 @@
       <a class="to-top-btn" title="Наверх" href="#header">&#8593;</a>
     </div>
   </footer>
+
+  <div class="modal modal--preload expample-popup" id="example-popup">
+    <div class="modal__wrapper">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__content">
+        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal></button>
+        <h2>Пример заполнения</h2>
+        <div class="eventList">
+          <div class="event">
+            <div class="form-group">
+              <h3 class="form-title">Описание события<br>&nbsp;</h3>
+              <input type="text" class="form-control" value="Запуск первого успешного проекта" readonly>
+            </div>
+            <div class="form-group">
+              <h3 class="form-title">Дата события<br><span>(опционально)</span></h3>
+              <input type="date" class="form-control" value="2003-01-02" readonly>
+            </div>
+          </div>
+          <div class="event">
+            <div class="form-group">
+              <h3 class="form-title">Описание события<br>&nbsp;</h3>
+              <input type="text" class="form-control"
+                value="С февраля 2015 примерно по декабрь 2017 была черная полоса, которую я успешно преодолел" readonly>
+            </div>
+            <div class="form-group">
+              <h3 class="form-title">Дата события<br><span>(опционально)</span></h3>
+              <input type="date" class="form-control" readonly>
+            </div>
+          </div>
+          <div class="event">
+            <div class="form-group">
+              <h3 class="form-title">Описание события<br>&nbsp;</h3>
+              <input type="text" class="form-control"
+                value="Рождение сына" readonly>
+            </div>
+            <div class="form-group">
+              <h3 class="form-title">Дата события<br><span>(опционально)</span></h3>
+              <input type="date" class="form-control" value="2019-08-10" readonly>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Bootstrap JS and jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
