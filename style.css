@@ -569,7 +569,7 @@ p.testimonial-text {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 1;
+    opacity: 0;
     cursor: pointer;
 }
 
