@@ -247,8 +247,20 @@
               </li>
             </ul>
             <div class="buttons-wrapper">
-              <button type="button" class="swiper__button swiper__button--prev" title="Предыдущий слайд">&larr;</button>
-              <button type="button" class="swiper__button swiper__button--next" title="Следующий слайд">&rarr;</button>
+              <button type="button" class="swiper__button swiper__button--prev" title="Предыдущий слайд">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M20 11C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13V11ZM3.29289 12.7071C2.90237 12.3166 2.90237 11.6834 3.29289 11.2929L9.65685 4.92893C10.0474 4.53841 10.6805 4.53841 11.0711 4.92893C11.4616 5.31946 11.4616 5.95262 11.0711 6.34315L5.41421 12L11.0711 17.6569C11.4616 18.0474 11.4616 18.6805 11.0711 19.0711C10.6805 19.4616 10.0474 19.4616 9.65685 19.0711L3.29289 12.7071ZM20 13H4V11H20V13Z"
+                    fill="black" />
+                </svg>
+              </button>
+              <button type="button" class="swiper__button swiper__button--next" title="Следующий слайд">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13V11ZM20.7071 12.7071C21.0976 12.3166 21.0976 11.6834 20.7071 11.2929L14.3431 4.92893C13.9526 4.53841 13.3195 4.53841 12.9289 4.92893C12.5384 5.31946 12.5384 5.95262 12.9289 6.34315L18.5858 12L12.9289 17.6569C12.5384 18.0474 12.5384 18.6805 12.9289 19.0711C13.3195 19.4616 13.9526 19.4616 14.3431 19.0711L20.7071 12.7071ZM4 13H20V11H4V13Z"
+                    fill="black" />
+                </svg>
+              </button>
             </div>
           </div>
 
@@ -462,7 +474,8 @@
                 <label class="form-title" for="birthPlace">Место рождения</label>
                 <p>Укажите место вашего рождения с учетом города и/или области для однозначной идентификации точки на
                   карте. В идеале - адрес роддома. При необходимости укажите координаты</p>
-                <input type="text" class="form-control" id="birthPlace" name="birthPlace" placeholder="Ваше место рождения" required>
+                <input type="text" class="form-control" id="birthPlace" name="birthPlace"
+                  placeholder="Ваше место рождения" required>
               </div>
             </fieldset>
 
@@ -472,7 +485,8 @@
                 <label class="form-title" for="contact">Email/Telegram</label>
                 <p> Укажите ваш Email/Telegram или любой другой удобный вам способ связи для получения результатов
                   анализа и ссылки на оплату</p>
-                <input type="text" class="form-control" id="contact" name="contact" placeholder="Ваши контакты" required>
+                <input type="text" class="form-control" id="contact" name="contact" placeholder="Ваши контакты"
+                  required>
               </div>
             </fieldset>
 
@@ -513,7 +527,8 @@
             <div class="form-group">
               <h3 class="form-title">Описание события</h3>
               <input type="text" class="form-control"
-                value="С февраля 2015 примерно по декабрь 2017 была черная полоса, которую я успешно преодолел" readonly>
+                value="С февраля 2015 примерно по декабрь 2017 была черная полоса, которую я успешно преодолел"
+                readonly>
             </div>
             <div class="form-group">
               <h3 class="form-title">Дата события<br><span>(опционально)</span></h3>
@@ -523,8 +538,7 @@
           <div class="event">
             <div class="form-group">
               <h3 class="form-title">Описание события</h3>
-              <input type="text" class="form-control"
-                value="Рождение сына" readonly>
+              <input type="text" class="form-control" value="Рождение сына" readonly>
             </div>
             <div class="form-group">
               <h3 class="form-title">Дата события<br><span>(опционально)</span></h3>
