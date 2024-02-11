@@ -505,7 +505,7 @@ p.testimonial-text {
 
 .eventList .event { 
     display: grid;
-    align-items: center;
+    align-items: end;
     grid-template-columns: 1fr auto auto;
     gap: 10px;
 }
@@ -515,7 +515,7 @@ p.testimonial-text {
 } 
 
 .eventList .event .btn {
-    margin-top: 12px;
+    margin-bottom: 15px;
 } 
 
 .btn-primary:not(:disabled):not(.disabled).active:focus, 
@@ -582,6 +582,7 @@ p.testimonial-text {
 
 .form-group {
     position: relative;
+    margin-bottom: 15px;
 }
 
 .form-check {
@@ -811,10 +812,131 @@ textarea:focus::placeholder {
     margin-bottom: 20px;
 }
 
+.modal .event .form-group{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
 .modal .form-title {
     margin-bottom: 5px;
 }
 
 .modal input {
     font-size: 13px;
+}
+
+@media screen and (max-width: 1023px) {
+    .navbar {
+        justify-content: center;
+        padding: 15px;
+    }
+
+    .logo {
+        max-width: 50px;
+        margin-right: 20px;
+        margin-bottom: 10px !important;
+    }
+    
+    .navbar-brand {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    .header-btn {
+        margin: 0 auto;
+    }
+
+    .section-box .container {
+        padding: 20px;
+        align-content: end;
+        align-items: flex-end;
+    }
+
+    .section-box .container-grid {
+        grid-template-columns: auto;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .section-box .text-block {
+        max-width: 100%;
+        height: fit-content;
+        margin: 0;
+    }
+
+    .section-box .text-block h2 {
+        font-size: 18px;
+    }
+
+    .section-box .text-block p {
+        font-size: 14px;
+    }
+
+    .health .container {
+        align-items: flex-end;
+    }
+
+    .spiritual .container {
+        align-items: flex-end;
+    }
+
+    .testimonials,
+    .consultation-form {
+        padding: 30px 0;
+    }
+
+    .testimonials h2,
+    .consultation-form h2 {
+        font-size: 30px;
+    }
+
+    .consultation-form form {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .consultation-form .form-title {
+        font-size: 16px;
+    }
+
+    .consultation-form .form-control {
+        font-size: 14px;
+    }
+
+    #approximateTimeFields .form-group {
+        min-width: 100px;
+    }
+
+    #approximateTimeFields .form-group label {
+        font-size: 12px;
+    }
+
+    #rectificationFields p {
+        font-size: 14px;
+    }
+
+    .eventList .event {
+        grid-template-columns: auto;
+        gap: 0;
+    }
+
+    .modal__wrapper {
+        padding: 40px 20px;
+    }
+
+    .modal__content {
+        width: 100%;
+        padding: 50px 20px 20px;
+    }
+
+    .modal .form-group {
+        margin-bottom: 5px;
+    }
+
+    .modal .form-group .form-title {
+        margin-bottom: 5px;
+    }
 }
