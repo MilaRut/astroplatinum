@@ -573,6 +573,11 @@ p.testimonial-text {
     cursor: pointer;
 }
 
+.to-top-btn:hover {
+    color: #ffd674;
+    text-decoration: none;
+}
+
 .form-group {
     position: relative;
     margin-bottom: 15px;
@@ -840,6 +845,14 @@ textarea:focus::placeholder {
 
     .header-btn {
         margin: 0 auto;
+    }
+
+    .career {
+        background-position-x: 70%;
+    }
+    
+    .relationships {
+        background-position-x: 47%;
     }
 
     .section-box .container {
