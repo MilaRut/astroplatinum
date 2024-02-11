@@ -569,15 +569,8 @@ p.testimonial-text {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0.7;
+    opacity: 1;
     cursor: pointer;
-}
-
-.to-top-btn:hover {
-    color: #ffd674;
-    text-decoration: none;
-    opacity: 1 !important;
-    transition: opacity 0.3s ease-in;
 }
 
 .form-group {
