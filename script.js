@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const modalOpenElements = document.querySelectorAll('[data-open-modal]');
   const modalCloseElements = document.querySelectorAll('[data-close-modal]');
   const modals = document.querySelectorAll('.modal');
-  
+
   function prepareOpening() {
     modals.forEach((el) => {
       setTimeout(() => {
@@ -126,13 +126,13 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 100);
     });
   }
-  
+
   function prepareClosing() {
     modals.forEach((modal) => {
       modal.classList.remove('active');
     });
   }
-  
+
   function initModal() {
     if (modals) {
       prepareOpening();
@@ -145,13 +145,13 @@ document.addEventListener('DOMContentLoaded', function () {
           currentModal.classList.add('active');
         });
       });
-  
+
       modalCloseElements.forEach((el) => {
         el.addEventListener('click', () => {
           prepareClosing();
         });
       });
-  
+
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
           prepareClosing();
@@ -159,7 +159,28 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
   }
-  
   initModal();
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  function initEffects() {
+    const slideRight = document.querySelectorAll('.slideright');
+    const slideLeft = document.querySelectorAll('.slideleft');
+
+    const observer = new IntersectionObserver((entries) => {
+
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('effect');
+        }
+      });
+    });
+    slideLeft.forEach((el) => {
+      observer.observe(el);
+    });
+    slideRight.forEach((el) => {
+      observer.observe(el);
+    });
+  }
+  initEffects();
+});
