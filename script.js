@@ -171,6 +171,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          entry.target.classList.remove('start');
           entry.target.classList.add('effect');
         }
       });

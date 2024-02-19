@@ -1184,10 +1184,19 @@ li {
 
 /* EFFECTS ANS ANIMATIONS */
 
+.slideleft.start {
+  opacity: 0;
+}
+
+.slideright.start {
+  opacity: 0;
+}
+
 .slideleft.effect {
   animation-duration: 1s;
   animation-name: slideleft;
   animation-timing-function: cubic-bezier(.69,1.29,.61,1.05);
+  animation-fill-mode: forwards;
 }
 
 
@@ -1195,6 +1204,7 @@ li {
   animation-duration: 1s;
   animation-name: slideright;
   animation-timing-function: cubic-bezier(.69,1.29,.61,1.05);
+  animation-fill-mode: forwards;
 }
 
 @keyframes slideleft {
