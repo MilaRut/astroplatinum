@@ -22,7 +22,7 @@
         <img src="favicon.ico" alt="PayAlipay Logo" class="logo mb-3">
         <a class="navbar-brand" href="#">AstroPlatinum</a>
         <div class="header-btn">
-          <a href="#consultation-form">
+          <a href="./index.html#consultation-form">
             <span>Заказать консультацию
               <span class="flare"></span>
             </span>
@@ -908,6 +908,23 @@
       </div>
     </div>
   </div>
+
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+      function showButton() {
+        const toTopBtn = document.querySelector('.to-top-btn');
+        window.addEventListener('scroll', function () {
+          const coeff = window.scrollY / 1000;
+          if (window.scrollY <= 700) {
+            toTopBtn.style.opacity = coeff;
+          } else {
+            toTopBtn.style.opacity = 0.7;
+          }
+        });
+      }
+      showButton();
+    });
+  </script>
 
   <!-- Bootstrap JS and jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
