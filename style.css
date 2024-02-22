@@ -1184,28 +1184,72 @@ li {
 
 /* EFFECTS ANS ANIMATIONS */
 
-.slideleft.start {
-  opacity: 0;
+@media screen and (max-width: 1023px)  {
+  .slideleft:not(.desk).start {
+    opacity: 0;
+  }
+  
+  .slideright:not(.desk).start {
+    opacity: 0;
+  }
+
+  .slideleft:not(.desk).effect {
+    animation-duration: 1s;
+    animation-name: slideleft;
+    animation-timing-function: cubic-bezier(.69,1.29,.61,1.05);
+    animation-fill-mode: forwards;
+  }
+    
+  .slideright:not(.desk).effect {
+    animation-duration: 1s;
+    animation-name: slideright;
+    animation-timing-function: cubic-bezier(.69,1.29,.61,1.05);
+    animation-fill-mode: forwards;
+  }
+
+  .slideleft.desk.effect {
+    animation: none;
+  }
+
+  .slideright.desk.effect {
+    animation: none;
+  }  
 }
 
-.slideright.start {
-  opacity: 0;
-}
+@media screen and (min-width: 1024px)  {
+  .slideleft:not(.mob).start {
+    opacity: 0;
+  }
 
-.slideleft.effect {
-  animation-duration: 1s;
-  animation-name: slideleft;
-  animation-timing-function: cubic-bezier(.69,1.29,.61,1.05);
-  animation-fill-mode: forwards;
-}
+  .slideright:not(.mob).start {
+    opacity: 0;
+  }
+
+  .slideleft:not(.mob).effect {
+    animation-duration: 1s;
+    animation-name: slideleft;
+    animation-timing-function: cubic-bezier(.69,1.29,.61,1.05);
+    animation-fill-mode: forwards;
+  }
 
 
-.slideright.effect {
+  .slideright:not(.mob).effect {
   animation-duration: 1s;
   animation-name: slideright;
   animation-timing-function: cubic-bezier(.69,1.29,.61,1.05);
   animation-fill-mode: forwards;
+  }
+  
+  .slideleft.mob.effect {
+    animation: none;
+  }
+
+  .slideright.mob.effect {
+    animation: none;
+  }  
 }
+
+
 
 @keyframes slideleft {
   from {
