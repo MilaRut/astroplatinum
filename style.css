@@ -470,7 +470,15 @@ p.testimonial-text {
   background-color: #222222;
   padding: 20px;
   border-radius: 15px;
-  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.inputs-group {
+  position: relative;
+}
+
+div.inputs-group {
+  padding: 0 20px;
 }
 
 .consultation-form .form-title {
@@ -894,9 +902,13 @@ textarea:focus::placeholder {
   margin-bottom: 5px;
 }
 
+.success-popup p {
+  margin-bottom: 20px;
+}
+
 .agreement {
   padding-left: 20px;
-  margin-bottom: 10px;
+  margin: 20px 0 10px;
 }
 
 .agreement label,
@@ -912,6 +924,22 @@ textarea:focus::placeholder {
 
 .agreement a:hover {
   color: #f8c44c;
+}
+
+.error-message {
+  display: none;
+  color: #ff0000;
+  font-size: 13px;
+}
+
+._error .error-message {
+  display: inline-block;
+}
+
+.alert-block {
+  position: absolute;
+  top: -40px;
+  padding: 20px 0;
 }
 
 @media screen and (max-width: 1023px) {
@@ -1072,6 +1100,10 @@ textarea:focus::placeholder {
 
   .modal .form-group .form-title {
     margin-bottom: 5px;
+  }
+
+  .error-message {
+    font-size: 10px;
   }
 }
 

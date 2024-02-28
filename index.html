@@ -283,10 +283,10 @@
       <section class="consultation-form" id="consultation-form">
         <div class="container">
           <!-- Форма для консультации -->
-          <form action="" method="POST" id="main-form">
+          <form action="" method="post" id="main-form" novalidate>
             <h2>Заказать консультацию</h2>
 
-            <fieldset>
+            <fieldset class="inputs-group">
               <!-- Радиокнопки "Тип консультации" -->
               <div class="form-group">
                 <h3 class="form-title">Тип консультации</h3>
@@ -334,12 +334,15 @@
               </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="inputs-group">
               <!-- Чек-боксы "Тип запроса" -->
+              <div class="alert-block" id="checkboxesAlert">
+                <span class="error-message">Пожалуйста, выберите тип вашего запроса</span>
+              </div>
               <div class="form-group">
                 <h3 class="form-title">Тип запроса</h3>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="requestType[]" id="career" value="career"
+                  <input class="form-check-input _req" type="checkbox" name="requestType[]" id="career" value="career"
                     checked>
                   <label class="form-check-label" for="career">
                     Карьера и профессиональный рост - 10.000р
@@ -350,7 +353,8 @@
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="requestType[]" id="finance" value="finance">
+                  <input class="form-check-input _req" type="checkbox" name="requestType[]" id="finance"
+                    value="finance">
                   <label class="form-check-label" for="finance">
                     Финансы и инвестиции - 10.000р
                     <small class="form-text text-muted">
@@ -361,7 +365,7 @@
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="requestType[]" id="emigration"
+                  <input class="form-check-input _req" type="checkbox" name="requestType[]" id="emigration"
                     value="emigration">
                   <label class="form-check-label" for="emigration">
                     Эмиграция и переезд - 10.000р
@@ -372,7 +376,7 @@
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="requestType[]" id="relationship"
+                  <input class="form-check-input _req" type="checkbox" name="requestType[]" id="relationship"
                     value="relationship">
                   <label class="form-check-label" for="relationship">
                     Партнерские и личные отношения - 10.000р
@@ -384,7 +388,7 @@
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="requestType[]" id="health" value="health">
+                  <input class="form-check-input _req" type="checkbox" name="requestType[]" id="health" value="health">
                   <label class="form-check-label" for="health">
                     Здоровье и благополучие - 10.000р
                     <small class="form-text text-muted">
@@ -396,7 +400,8 @@
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="requestType[]" id="spiritual" value="spiritual">
+                  <input class="form-check-input _req" type="checkbox" name="requestType[]" id="spiritual"
+                    value="spiritual">
                   <label class="form-check-label" for="spiritual">
                     Духовный рост - 10.000р
                     <small class="form-text text-muted">
@@ -406,7 +411,7 @@
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="requestType[]" id="own" value="own">
+                  <input class="form-check-input _req" type="checkbox" name="requestType[]" id="own" value="own">
                   <label class="form-check-label" for="own">
                     Свой запрос - по договоренности
                     <small class="form-text text-muted">
@@ -426,33 +431,40 @@
               </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="inputs-group">
               <!-- Дата рождения -->
+              <div class="alert-block" id="dateOfBirthAlert">
+                <span class="error-message">Пожалуйста, укажите дату вашего рождения</span>
+              </div>
               <div class="form-group">
                 <label class="form-title" for="dateOfBirth">Дата рождения</label>
                 <p>Укажите дату вашего рождения</p>
-                <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" required>
+                <input type="date" class="form-control _req" id="dateOfBirth" name="dateOfBirth" required>
               </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="inputs-group">
               <!-- Дополнительные поля в зависимости от выбора времени рождения -->
               <!-- Это требует JavaScript для динамического отображения -->
               <!-- Радиокнопки для времени рождения -->
+              <div class="alert-block" id="dateOfBirthAlert">
+                <span class="error-message">Пожалуйста, укажите время вашего рождения</span>
+              </div>
               <div class="form-group">
                 <h3 class="form-title">Время рождения</h3>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="birthTimeOption" id="exactTime" value="exact"
+                  <input class="form-check-input _req" type="radio" name="birthTimeOption" id="exactTime" value="exact"
                     checked>
                   <label class="form-check-label" for="exactTime">Известно точно</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="birthTimeOption" id="approximateTime"
+                  <input class="form-check-input _req" type="radio" name="birthTimeOption" id="approximateTime"
                     value="approximate">
                   <label class="form-check-label" for="approximateTime">Известно примерно</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="birthTimeOption" id="unknownTime" value="unknown">
+                  <input class="form-check-input _req" type="radio" name="birthTimeOption" id="unknownTime"
+                    value="unknown">
                   <label class="form-check-label" for="unknownTime">Неизвестно</label>
                 </div>
               </div>
@@ -494,38 +506,51 @@
               </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="inputs-group">
               <!-- Место рождения -->
+              <div class="alert-block" id="birthPlaceAlert">
+                <span class="error-message">Пожалуйста, укажите место вашего рождения (хотя бы приблизительное)</span>
+              </div>
               <div class="form-group">
                 <label class="form-title" for="birthPlace">Место рождения</label>
                 <p>Укажите место вашего рождения с учетом города и/или области для однозначной идентификации точки на
                   карте. В идеале - адрес роддома. При необходимости укажите координаты</p>
                 <button type="button" class="example-btn" data-open-modal
                   data-modal-id="#example-popup2">Пример</button>
-                <input type="text" class="form-control" id="birthPlace" name="birthPlace"
+                <input type="text" class="form-control _req" id="birthPlace" name="birthPlace"
                   placeholder="Ваше место рождения" required>
               </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="inputs-group">
               <!-- Email/Telegram -->
+              <div class="alert-block" id="contactAlert">
+                <span class="error-message">Пожалуйста, укажите, как с вами можно связаться, чтобы мы могли отправить
+                  вам результаты анализа и ссылку на оплату</span>
+              </div>
               <div class="form-group">
                 <label class="form-title" for="contact">Email/Telegram</label>
                 <p> Укажите ваш Email/Telegram или любой другой удобный вам способ связи для получения результатов
                   анализа и ссылки на оплату</p>
-                <input type="text" class="form-control" id="contact" name="contact" placeholder="Ваши контакты"
+                <input type="text" class="form-control _req" id="contact" name="contact" placeholder="Ваши контакты"
                   required>
               </div>
             </fieldset>
 
-            <!-- Кнопка отправки -->
-            <div class="agreement">
-              <input type="checkbox" name="agreement" id="agreement" checked required>
-              <label for="agreement">
-                Я ознакомлен(-а) и подтверждаю свое согласие с условиями <a href="./privacy_policy.html"
-                  target="_blank">Политики обработки персональных данных</a>.
-              </label>
+
+            <div class="inputs-group">
+              <div class="alert-block" id="agreementAlert">
+                <span class="error-message">Пожалуйста, поставьте отметку о согласии</span>
+              </div>
+              <div class="agreement">
+                <input type="checkbox" class="_req" name="agreement" id="agreement" checked required>
+                <label for="agreement">
+                  Я ознакомлен(-а) и подтверждаю свое согласие с условиями <a href="./privacy_policy.html"
+                    target="_blank">Политики обработки персональных данных</a>.
+                </label>
+              </div>
             </div>
+            <!-- Кнопка отправки -->
             <button type="submit" class="btn btn-primary submit-btn">
               <span>Отправить
                 <span class="flare"></span>
@@ -623,6 +648,18 @@
       </div>
     </div>
   </div>
+  <div class="modal modal--preload success-popup" id="successPopup">
+    <div class="modal__wrapper">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__content">
+        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal></button>
+        <p>Ваша заявка доставлена! В течение недели с вами свяжутся.</p>
+        <p>В случае, если вы заказывали текстовую или аудио-консультацию, вы сразу бесплатно получите урезанную версию.
+          Для получения полной версии необходимо будет внести оплату.</p>
+        <p>Спасибо, что пользуетесь услугами AstroPlatinum!</p>
+      </div>
+    </div>
+  </div>
 
   <!-- Bootstrap JS and jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -632,6 +669,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="./script.js"></script>
+  <script src="./validation.js"></script>
 
 </body>
 
