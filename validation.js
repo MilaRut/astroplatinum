@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
           form.reset(); //reset form after AJAX success or do something else
         }
       }
+      formRemoveError(input);
       //Fail the onsubmit to avoid page refresh.
       return false;
     } else {
