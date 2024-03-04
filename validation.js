@@ -27,12 +27,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (error === 0) {
       createObject();
       let json = JSON.stringify(object);
-      showSuccessPopup();
 
       var xhr = new XMLHttpRequest();
 
       //open the request
-      xhr.open('POST', 'http://a24044-83a6.v.d-f.pw/app')
+      xhr.open('POST', 'http://a24044-83a6.v.d-f.pw/')
       xhr.setRequestHeader("Content-Type", "application/json");
 
       //send the json
@@ -43,7 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
           form.reset(); //reset form after AJAX success or do something else
         }
       }
-      formRemoveError(input);
+      removeAllErrors();
+      showSuccessPopup();
       //Fail the onsubmit to avoid page refresh.
       return false;
     } else {
@@ -105,6 +105,13 @@ document.addEventListener('DOMContentLoaded', function () {
   function formRemoveError(input) {
     input.parentElement.classList.remove('_error');
     input.classList.remove('_error');
+  }
+
+  function removeAllErrors() {
+    const inputs = document.querySelectorAll('._req');
+    inputs.forEach((input) => {
+      formRemoveError(input);
+    })
   }
 
   function createObject() {
